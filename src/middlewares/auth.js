@@ -17,7 +17,7 @@ try {
         }
 
         request.userId = decoded.id;
-
+        request.userName = decoded.name;
         
     });
 } catch (err){

@@ -8,6 +8,7 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import ProductController from './app/controllers/ProductController';
 import categoryController from './app/controllers/categoryController';
+import OrderController from './app/controllers/OrderController';
 
 
 const routes = new Router();
@@ -24,5 +25,7 @@ routes.get('/products', ProductController.index);
 
 routes.post('/categories',categoryController.store);
 routes.get('/categories', categoryController.index);
+
+routes.post('/orders', OrderController.store);
 
 export default routes;
