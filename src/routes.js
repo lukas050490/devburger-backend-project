@@ -7,7 +7,7 @@ import authMiddleware from './middlewares/auth';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import ProductController from './app/controllers/ProductController';
-import categoryController from './app/controllers/categoryController';
+import categoryController from './app/controllers/CategoryController';
 import OrderController from './app/controllers/OrderController';
 
 
