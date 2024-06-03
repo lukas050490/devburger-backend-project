@@ -43,7 +43,7 @@ class OrderController {
        });
 
        const formattedProducts = findproducts.map((product) => {
-        const productIndex = product.findIndex((item) => item.id === product.id);
+        const productIndex = products.findIndex((item) => item.id === product.id);
         const newProduct = {
             id: product.id,
             name: product.name,
