@@ -81,7 +81,7 @@ class OrderController {
    try{
     schema.validateSync(request.body, {abortEarly:false});
    }catch(err){
-    return response.status(400).json({error: err.error});
+    return response.status(400).json({error: err.errors});
    }
 
    const {admin: isAdmin} = await User.findByPk(request.userId);
@@ -95,7 +95,7 @@ class OrderController {
    try {
    await Order.updateOne({_id:id},{status});
    }catch(err){
-    return response.status(400).json({error: err.message});
+    return response.status(400).json({error: error.message});
    }
    return response.json({message: 'Status updated sucessfully'});
 }
